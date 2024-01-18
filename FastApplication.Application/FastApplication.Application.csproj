@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.26" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\FastApplication.Domain\FastApplication.Domain.csproj" />
+    <ProjectReference Include="..\FastApplication.Infrastructure\FastApplication.Infrastructure.csproj" />
+  </ItemGroup>
+
+</Project>
