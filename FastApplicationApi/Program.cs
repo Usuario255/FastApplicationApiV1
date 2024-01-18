@@ -17,8 +17,21 @@ builder.Services.AddApiConfig();
 
 builder.Services.AddSwaggerConfig();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("MinhaPolitica", app =>
+    {
+        app.AllowAnyOrigin();
+        app.AllowAnyMethod();
+        app.AllowAnyHeader();
+    });
+});
 
 var app = builder.Build();
+
+app.UseCors("MinhaPolitica");
+
+app.UseAuthorization();
 
 app.UseApiConfig(app.Environment);
 
